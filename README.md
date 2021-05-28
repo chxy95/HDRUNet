@@ -12,8 +12,4 @@ By Xiangyu Chen, Yihao Liu, Zhengwen Zhang, [Yu Qiao](https://scholar.google.com
       year={2021}
     }
 
-## Overview
-Overview of the network:  
-<img src="" width="700"/>
-
 Waiting for updating...
