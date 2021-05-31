@@ -3,7 +3,7 @@
 ### HDRUNet: Single Image HDR Reconstruction with Denoising and Dequantization
 By Xiangyu Chen, Yihao Liu, Zhengwen Zhang, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN) and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
 
-<img src="https://raw.githubusercontent.com/chxy95/HDRUNet/master/images/introduction.jpg" width="700"/>
+<img src="https://raw.githubusercontent.com/chxy95/HDRUNet/master/images/introduction.jpg"/>
 
 #### BibTeX
 
