@@ -3,6 +3,8 @@
 ### HDRUNet: Single Image HDR Reconstruction with Denoising and Dequantization
 By Xiangyu Chen, Yihao Liu, Zhengwen Zhang, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN) and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
 
+#### We won the second place in [NTIRE2021 HDR Challenge](https://data.vision.ee.ethz.ch/cvl/ntire21/) ([Track1: Single Frame](https://competitions.codalab.org/competitions/28161)). The paper is accepted to CVPR2021 Workshop.
+
 <img src="https://raw.githubusercontent.com/chxy95/HDRUNet/master/images/introduction.jpg"/>
 
 #### BibTeX
@@ -15,8 +17,15 @@ By Xiangyu Chen, Yihao Liu, Zhengwen Zhang, [Yu Qiao](https://scholar.google.com
     }
 
 ## Overview
+Overview of the network:
 
 <img src="https://raw.githubusercontent.com/chxy95/HDRUNet/master/images/Network_Structure.png" width="600"/>
+
+Overview of the loss function:
+
+```
+Tanh_L1(Y, H) = |Tanh(Y) - Tanh(H)|
+```
 
 ## Getting Started
 
@@ -39,15 +48,36 @@ pip install -r requirements.txt
 
 ### How to test
 
-- Modify the `dataroot_LQ` and `pretrain_model_G` (you can also use the pretrained model which is provided in the `./pretrained_model`) in the `./codes/options/test/test_HDRUNet.yml`, then run
+- Modify `dataroot_LQ` and `pretrain_model_G` (you can also use the pretrained model which is provided in the `./pretrained_model`) in `./codes/options/test/test_HDRUNet.yml`, then run
 ```
 cd codes
 python test.py -opt options/test/test_HDRUNet.yml
 ```
-- The test results will be saved to `./results/testset_name`.
+The test results will be saved to `./results/testset_name`.
 
 ### How to train
 
+- Prepare the data. Modify `input_folder` and `save_folder` in `./scripts/extract_subimgs_single.py`, then run
+```
+cd scripts
+python extract_subimgs_single.py
+```
+
+- Modify `dataroot_LQ` and `dataroot_GT` in `./codes/options/train/train_HDRUNet.yml`, then run
+```
+cd codes
+python train.py -opt options/train/train_HDRUNet.yml
+```
+The models and training states will be saved to `./experiments/name`.
+
 ### Visualization
 
-Updating...
+In `./scripts`, several scripts are available. `data_io.py` and `metrics.py` are provided by the competition organizer for reading/writing data and evaluation. Based on these codes, I provide a script for visualization by using the tone-mapping provided in `metrics.py`. Modify paths of the data in `./scripts/tonemapped_visualization.py` and run
+```
+cd scripts
+python tonemapped_visualization.py
+```
+to visualize the images.
+
+## Acknowledgments
+Our code is inspired by [BasicSR](https://github.com/xinntao/BasicSR).
