@@ -8,7 +8,7 @@ By Xiangyu Chen, Yihao Liu, Zhengwen Zhang, [Yu Qiao](https://scholar.google.com
 #### BibTeX
 
     @inproceedings{chen2021hdrunet,
-      title={{HDRUNet}: Single Image HDR Reconstruction with Denoising and Dequantization},
+      title={HDRUNet: Single Image HDR Reconstruction with Denoising and Dequantization},
       author={Chen, Xiangyu and Liu, Yihao and Zhang, Zhengwen and Qiao, Yu and Dong, Chao}, 
       booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
       year={2021}
@@ -16,6 +16,28 @@ By Xiangyu Chen, Yihao Liu, Zhengwen Zhang, [Yu Qiao](https://scholar.google.com
 
 ## Overview
 
-<img src="https://raw.githubusercontent.com/chxy95/HDRUNet/master/images/Network_Structure.png"/>
+<img src="https://raw.githubusercontent.com/chxy95/HDRUNet/master/images/Network_Structure.png" width="600"/>
+
+## Getting Started
+
+### Configuration
+```
+pip install -r requirements.txt
+```
+
+### Dataset
+Register a codalab account and log in, then find the download link on this page:
+```
+https://competitions.codalab.org/competitions/28161#participate-get-data
+```
+
+### How to test
+
+- Modify the `dataroot_LQ` and `pretrain_model_G` (you can also use the pretrained model which is provided in the `./pretrained_model`) in the `./codes/options/test/test_HDRUNet.yml`, then run
+```
+cd codes
+python test.py -opt options/test/test_HDRUNet.yml
+```
+- The test results will be saved to `./results/testset_name`.
 
 Updating...
