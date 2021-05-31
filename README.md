@@ -1,4 +1,4 @@
-# HDRUNet [[Paper]](http://arxiv.org/abs/2105.13084)
+# HDRUNet [[Paper Link]](http://arxiv.org/abs/2105.13084)
 
 ### HDRUNet: Single Image HDR Reconstruction with Denoising and Dequantization
 By Xiangyu Chen, Yihao Liu, Zhengwen Zhang, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN) and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
@@ -20,15 +20,21 @@ By Xiangyu Chen, Yihao Liu, Zhengwen Zhang, [Yu Qiao](https://scholar.google.com
 
 ## Getting Started
 
-### Configuration
-```
-pip install -r requirements.txt
-```
+1. [Dataset](#dataset)
+2. [Configuration](#configuration)
+3. [How to test](#how-to-test)
+4. [How to train](#how-to-train)
+5. [Visualization](#visualization)
 
 ### Dataset
 Register a codalab account and log in, then find the download link on this page:
 ```
 https://competitions.codalab.org/competitions/28161#participate-get-data
+```
+
+### Configuration
+```
+pip install -r requirements.txt
 ```
 
 ### How to test
@@ -39,5 +45,9 @@ cd codes
 python test.py -opt options/test/test_HDRUNet.yml
 ```
 - The test results will be saved to `./results/testset_name`.
+
+### How to train
+
+### Visualization
 
 Updating...
