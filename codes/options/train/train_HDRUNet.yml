@@ -1,0 +1,69 @@
+#### general settings
+name: HDRUNet_tanh_l1_bs_16_ps_160
+model: condition
+use_tb_logger: true
+distortion: sr
+scale: 1
+gpu_ids: [0]
+
+#### datasets
+datasets:
+  train:
+    name: Single_LDR2HDR
+    mode: LQGT_condition
+    dataroot_LQ: /data0/NTIRE2021_HDR/000_Train_SingleFrame_FirstStage/medium_sub
+    dataroot_GT: /data0/NTIRE2021_HDR/000_Train_SingleFrame_FirstStage/gt_sub
+    dataroot_ratio: /data0/NTIRE2021_HDR/000_Train_SingleFrame_FirstStage/alignratio
+    use_shuffle: true
+    n_workers: 8
+    batch_size: 16
+    GT_size: 160
+    use_flip: true
+    use_rot: true
+    condition: image
+  val:
+    name: Single_LDR2HDR
+    mode: LQGT_condition
+    dataroot_LQ: /data0/NTIRE2021_HDR/000_Valid_SingleFrame_FirstStage/medium
+    dataroot_GT: /data0/NTIRE2021_HDR/000_Valid_SingleFrame_FirstStage/gt
+    dataroot_ratio: /data0/NTIRE2021_HDR/000_Valid_SingleFrame_FirstStage/alignratio
+    condition: image
+
+#### network structures
+network_G:
+  which_model_G: HDRUNet
+  in_nc: 3
+  out_nc: 3
+  nf: 64 
+  act_type: relu 
+
+#### path
+path:
+  root: ./
+  # pretrain_model_G: ../experiments/...
+  strict_load: false
+  # resume_state: ../experiments/...
+
+#### training settings: learning rate scheme, loss
+train:
+  lr_G: !!float 2e-4
+  lr_scheme: MultiStepLR # MultiStepLR | CosineAnnealingLR_Restart
+  beta1: 0.9
+  beta2: 0.99
+  niter: 1000000 # 600000 
+  warmup_iter: -1  # no warm up
+
+  lr_scheme: MultiStepLR
+  lr_steps: [200000, 400000, 600000, 800000]
+  lr_gamma: 0.5
+
+  pixel_criterion: tanh_l1 # l1 | l2 | tanh_l1 | tanh_l2
+  pixel_weight: 1.0
+
+  manual_seed: 10
+  val_freq: !!float 5e3
+
+#### logger
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3
