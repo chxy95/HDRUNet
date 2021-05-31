@@ -14,4 +14,8 @@ By Xiangyu Chen, Yihao Liu, Zhengwen Zhang, [Yu Qiao](https://scholar.google.com
       year={2021}
     }
 
-Waiting for updating...
+## Overview
+
+<img src="https://raw.githubusercontent.com/chxy95/HDRUNet/master/images/Network_Structure.png"/>
+
+Updating...
