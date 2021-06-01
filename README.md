@@ -40,6 +40,7 @@ Register a codalab account and log in, then find the download link on this page:
 ```
 https://competitions.codalab.org/competitions/28161#participate-get-data
 ```
+#### [Notice] It is strongly recommended to use the data provided by the competition organizer for training and testing, or you need at least a basic understanding of the competition data. Otherwise, it may be difficult to get the desired results.
 
 ### Configuration
 ```
