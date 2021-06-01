@@ -80,4 +80,4 @@ python tonemapped_visualization.py
 to visualize the images.
 
 ## Acknowledgments
-Our code is inspired by [BasicSR](https://github.com/xinntao/BasicSR).
+The code is inspired by [BasicSR](https://github.com/xinntao/BasicSR).
