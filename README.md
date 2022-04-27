@@ -1,7 +1,7 @@
 # HDRUNet [[Paper Link]](http://arxiv.org/abs/2105.13084)
 
 ### HDRUNet: Single Image HDR Reconstruction with Denoising and Dequantization
-Xiangyu Chen, Yihao Liu, Zhengwen Zhang, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN) and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
+Xiangyu Chen, [Yihao Liu](https://scholar.google.com.hk/citations?user=WRIYcNwAAAAJ&hl=zh-CN), Zhengwen Zhang, [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl=zh-CN) and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN)
 
 #### We won the second place in [NTIRE2021 HDR Challenge](https://data.vision.ee.ethz.ch/cvl/ntire21/) ([Track1: Single Frame](https://competitions.codalab.org/competitions/28161)). The paper is accepted to CVPR2021 Workshop.
 
