@@ -9,12 +9,13 @@ Xiangyu Chen, [Yihao Liu](https://scholar.google.com.hk/citations?user=WRIYcNwAA
 
 #### BibTeX
 
-    @inproceedings{chen2021hdrunet,
-      title={HDRUnet: Single image hdr reconstruction with denoising and dequantization},
-      author={Chen, Xiangyu and Liu, Yihao and Zhang, Zhengwen and Qiao, Yu and Dong, Chao},
-      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-      pages={354--363},
-      year={2021}
+    @InProceedings{Chen_2021_CVPR,
+      author    = {Chen, Xiangyu and Liu, Yihao and Zhang, Zhengwen and Qiao, Yu and Dong, Chao},
+      title     = {HDRUNet: Single Image HDR Reconstruction With Denoising and Dequantization},
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+      month     = {June},
+      year      = {2021},
+      pages     = {354-363}
     }
 
 ## Overview
